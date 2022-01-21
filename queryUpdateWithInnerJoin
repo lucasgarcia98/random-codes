@@ -1,0 +1,8 @@
+Se você tem uma tabelaA, onde possui uma foreignKey para uma tabelaB, e você quer colocar uma informação de texto na tabelaA, puxando diretamente da tabelaB, use a query abaixo.
+
+MYSQL
+
+UPDATE tabelaA
+INNER JOIN tabelaB
+ON tabelaA.foreign_id = tabelaB.id
+SET tabelaA.foreign_text = tabelaB.text

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: black;
+        }
+        
+        .netflix {
+            width: 140px;
+            height: 250px;
+            position: relative;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient( 90deg, #b1060e 0, #b1060e 50px, transparent 50px, transparent 90px, #b1060e 90px, #b1060e 140px);
+        }
+        
+        .netflix::before,
+        .netflix::after {
+            content: '';
+            display: block;
+            position: absolute;
+        }
+        
+        .netflix::before {
+            width: 50px;
+            height: 250px;
+            top: 0;
+            left: 45px;
+            background-color: #e50914;
+            transform: skewX(19.6deg);
+            box-shadow: 0 0 30px black;
+        }
+        
+        .netflix::after {
+            width: 190px;
+            height: 25px;
+            top: 245px;
+            left: -25px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="netflix"></div>
+</body>
+
+</html>
